@@ -1,0 +1,22 @@
+shared-packages
+    - packages:
+        - componants => npm module bundled with vite
+        - button => npm module bundled with vite
+        - card => npm module bundled with vite
+        - builder => npm module bundled with vite
+    - react app vite => react app bundled with vite (like Elit)
+
+
+npx lerna create @shared-packages/button --yes
+npx lerna create @shared-packages/builder --yes
+
+add the builder as dev dep to any new componant
+npx lerna add @shared-packages/builder --dev --scope @shared-packages/button
+
+npx lerna add rollup --scope=@shared-packages/builder
+npx lerna add @babel/core --scope=@shared-packages/builder
+npx lerna add @babel/preset-env --scope=@shared-packages/builder
+npx lerna add @babel/preset-react --scope=@shared-packages/builder
+npx lerna add @rollup/plugin-babel --scope=@shared-packages/builder
+npx lerna add @rollup/plugin-node-resolve --scope=@shared-packages/builder
+npx lerna add @rollup/plugin-typescript --scope=@shared-packages/builder
