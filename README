@@ -20,3 +20,7 @@ npx lerna add @babel/preset-react --scope=@shared-packages/builder
 npx lerna add @rollup/plugin-babel --scope=@shared-packages/builder
 npx lerna add @rollup/plugin-node-resolve --scope=@shared-packages/builder
 npx lerna add @rollup/plugin-typescript --scope=@shared-packages/builder
+
+npx lerna add vite --scope=@shared-packages/builder
+npx lerna add vite-plugin-dts --scope=@shared-packages/builder
+npx lerna add @vitejs/plugin-react --scope=@shared-packages/builder

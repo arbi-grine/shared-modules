@@ -1,48 +1,43 @@
 #!/usr/bin/env node
-const rollup = require('rollup');
-const path = require('path');
-const resolve = require('@rollup/plugin-node-resolve').default;
-const babel = require('@rollup/plugin-babel').default;
-const typescript = require('@rollup/plugin-typescript');
+
+const vite = require('vite');
+const dts = require('vite-plugin-dts');
+const path = require('node:path');
+const react = require('@vitejs/plugin-react');
 
 const currentWorkingPath = process.cwd();
-const { main, name } = require(path.join(currentWorkingPath, 'package.json'));
-
-const inputPath = path.join(currentWorkingPath, main);
+const { main, name, peerDependencies } = require(path.join(
+  currentWorkingPath,
+  'package.json'
+));
 
 const fileName = name.replace('@shared-packages/', '');
+const inputPath = path.join(currentWorkingPath, main);
 
-const inputOptions = {
-  input: inputPath,
-  external: ['react'],
+const config = vite.defineConfig({
   plugins: [
-    resolve(),
-    typescript({ tsconfig: './tsconfig.json' }),
-    babel({
-      presets: ['@babel/preset-env', '@babel/preset-react'],
-      babelHelpers: 'bundled',
+    react(),
+    dts({
+      insertTypesEntry: true,
     }),
   ],
-};
-
-const outputOptions = [
-  {
-    file: `dist/${fileName}.cjs.js`,
-    format: 'cjs',
-    sourcemap:true
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, inputPath),
+      name: fileName,
+      formats: ['cjs', 'esm'],
+      fileName: (format) => `${fileName}.${format}.js`,
+    },
+    rollupOptions: {
+      external: peerDependencies
+        ? [...Object.keys(peerDependencies)]
+        : undefined,
+    },
   },
-  {
-    file: `dist/${fileName}.esm.js`,
-    format: 'esm',
-    sourcemap:true
-  },
-];
+});
 
-async function build() {
-  const bundle = await rollup.rollup(inputOptions);
-  outputOptions.forEach(async (options) => {
-    await bundle.write(options);
-  });
+async function builder() {
+  await vite.build(config);
 }
 
-build();
+builder();
