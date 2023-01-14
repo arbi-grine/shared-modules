@@ -1,6 +1,6 @@
 {
-  "name": "shared-packages",
-  "private": true,
+  "name": "@grnarb/shared-packages",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -44,5 +44,17 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "description": "shared-packages     - packages:         - componants => npm module bundled with vite         - button => npm module bundled with vite         - card => npm module bundled with vite         - builder => npm module bundled with vite     - react app vite => react app bundled with vite (like Elit)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arbi-grine/shared-modules.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arbi-grine/shared-modules/issues"
+  },
+  "homepage": "https://github.com/arbi-grine/shared-modules#readme"
 }
