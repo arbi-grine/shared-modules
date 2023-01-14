@@ -5,13 +5,16 @@
   "keywords": [],
   "author": "GRINE Arbi <agr@bourse.lu>",
   "license": "ISC",
-  "main": "lib/card.ts",
+  "main": "dist/card.cjs.js",
+  "module": "dist/button.esm.js",
+  "src": "lib/card.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
   "publishConfig": {
     "registry": "http://registry.npmjs.org/"

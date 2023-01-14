@@ -5,13 +5,16 @@
   "keywords": [],
   "author": "GRINE Arbi <agr@bourse.lu>",
   "license": "ISC",
-  "main": "lib/button.ts",
+  "main": "dist/button.cjs.js",
+  "module": "dist/button.esm.js",
+  "src": "lib/index.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
   "publishConfig": {
     "registry": "http://registry.npmjs.org/"
@@ -21,6 +24,15 @@
     "test": "node ./__tests__/@shared-packages/button.test.js"
   },
   "devDependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.4",
     "@shared-packages/builder": "^0.0.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "11.x",
+    "@emotion/styled": "11.x",
+    "@mui/material": "5.x",
+    "react": "17.x"
   }
 }

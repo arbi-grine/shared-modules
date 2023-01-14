@@ -6,13 +6,13 @@ const path = require('node:path');
 const react = require('@vitejs/plugin-react');
 
 const currentWorkingPath = process.cwd();
-const { main, name, peerDependencies } = require(path.join(
+const { src, name, peerDependencies } = require(path.join(
   currentWorkingPath,
   'package.json'
 ));
 
 const fileName = name.replace('@shared-packages/', '');
-const inputPath = path.join(currentWorkingPath, main);
+const inputPath = path.join(currentWorkingPath, src);
 
 const config = vite.defineConfig({
   plugins: [
