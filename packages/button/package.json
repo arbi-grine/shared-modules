@@ -34,5 +34,6 @@
     "@emotion/styled": "11.x",
     "@mui/material": "5.x",
     "react": "17.x"
-  }
+  },
+  "gitHead": "a9214d1404bea64707e15355a21aac89a3a6871b"
 }
