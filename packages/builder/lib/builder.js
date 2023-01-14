@@ -11,7 +11,7 @@ const { src, name, peerDependencies } = require(path.join(
   'package.json'
 ));
 
-const fileName = name.replace('@shared-packages/', '');
+const fileName = name.replace('@grnarb/', '');
 const inputPath = path.join(currentWorkingPath, src);
 
 const config = vite.defineConfig({

@@ -7,20 +7,20 @@ shared-packages
     - react app vite => react app bundled with vite (like Elit)
 
 
-npx lerna create @shared-packages/button --yes
-npx lerna create @shared-packages/builder --yes
+npx lerna create @grnarb/button --yes
+npx lerna create @grnarb/builder --yes
 
 add the builder as dev dep to any new componant
-npx lerna add @shared-packages/builder --dev --scope @shared-packages/button
+npx lerna add @grnarb/builder --dev --scope @grnarb/button
 
-npx lerna add rollup --scope=@shared-packages/builder
-npx lerna add @babel/core --scope=@shared-packages/builder
-npx lerna add @babel/preset-env --scope=@shared-packages/builder
-npx lerna add @babel/preset-react --scope=@shared-packages/builder
-npx lerna add @rollup/plugin-babel --scope=@shared-packages/builder
-npx lerna add @rollup/plugin-node-resolve --scope=@shared-packages/builder
-npx lerna add @rollup/plugin-typescript --scope=@shared-packages/builder
+npx lerna add rollup --scope=@grnarb/builder
+npx lerna add @babel/core --scope=@grnarb/builder
+npx lerna add @babel/preset-env --scope=@grnarb/builder
+npx lerna add @babel/preset-react --scope=@grnarb/builder
+npx lerna add @rollup/plugin-babel --scope=@grnarb/builder
+npx lerna add @rollup/plugin-node-resolve --scope=@grnarb/builder
+npx lerna add @rollup/plugin-typescript --scope=@grnarb/builder
 
-npx lerna add vite --scope=@shared-packages/builder
-npx lerna add vite-plugin-dts --scope=@shared-packages/builder
-npx lerna add @vitejs/plugin-react --scope=@shared-packages/builder
+npx lerna add vite --scope=@grnarb/builder
+npx lerna add vite-plugin-dts --scope=@grnarb/builder
+npx lerna add @vitejs/plugin-react --scope=@grnarb/builder

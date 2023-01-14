@@ -1,11 +1,11 @@
-# `@shared-packages/card`
+# `@grnarb/card`
 
 > TODO: description
 
 ## Usage
 
 ```
-const card = require('@shared-packages/card');
+const card = require('@grnarb/card');
 
 // TODO: DEMONSTRATE API
 ```

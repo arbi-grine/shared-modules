@@ -1,11 +1,11 @@
-# `@shared-packages/button`
+# `@grnarb/button`
 
 > TODO: description
 
 ## Usage
 
 ```
-const button = require('@shared-packages/button');
+const button = require('@grnarb/button');
 
 // TODO: DEMONSTRATE API
 ```

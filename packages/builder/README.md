@@ -1,11 +1,11 @@
-# `@shared-packages/builder`
+# `@grnarb/builder`
 
 > TODO: description
 
 ## Usage
 
 ```
-const builder = require('@shared-packages/builder');
+const builder = require('@grnarb/builder');
 
 // TODO: DEMONSTRATE API
 ```
