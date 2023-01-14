@@ -17,7 +17,7 @@
     "dist"
   ],
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "access": "public"
   },
   "scripts": {
     "build": "shared-packages-builder",
@@ -35,5 +35,5 @@
     "@mui/material": "5.x",
     "react": "17.x"
   },
-  "gitHead": "d32a8705b63f7b01f0493f34e3f15e4dc44ba162"
+  "gitHead": "32f7eb3a534667394a2e39907bf69e2cbc1a5920"
 }

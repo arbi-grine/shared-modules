@@ -14,7 +14,7 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "access": "public"
   },
   "scripts": {
     "test": "node ./__tests__/@grnarb/builder.test.js"
@@ -27,5 +27,5 @@
     "vite": "^4.0.4",
     "vite-plugin-dts": "^1.7.1"
   },
-  "gitHead": "d32a8705b63f7b01f0493f34e3f15e4dc44ba162"
+  "gitHead": "32f7eb3a534667394a2e39907bf69e2cbc1a5920"
 }
