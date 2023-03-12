@@ -24,3 +24,9 @@ npx lerna add @rollup/plugin-typescript --scope=@grnarb/builder
 npx lerna add vite --scope=@grnarb/builder
 npx lerna add vite-plugin-dts --scope=@grnarb/builder
 npx lerna add @vitejs/plugin-react --scope=@grnarb/builder
+
+npx lerna add @emotion/styled --dev --scope shared-packages/button
+npx lerna add react@5.x --peer --scope shared-packages/button
+npx lerna add @mui/material@5.x --peer --scope shared-packages/button
+npx lerna add @emotion/styled@11.x --peer --scope shared-packages/button
+npx lerna add @emotion/react@11.x --peer --scope shared-packages/button
