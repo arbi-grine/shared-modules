@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/arbi-grine/shared-modules/compare/v0.2.0...v0.3.0) (2023-03-12)
+
+
+### Features
+
+* update button 2 ([9894c75](https://github.com/arbi-grine/shared-modules/commit/9894c751e29d0920433fb25098b721a2d7cced53))
+
+
+
+
+
 # [0.2.0](https://github.com/arbi-grine/shared-modules/compare/v0.1.0...v0.2.0) (2023-03-12)
 
 
